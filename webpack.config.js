@@ -1,7 +1,7 @@
 // webpack.config.js
-var path = require('path');
+// var path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-var historyApiFallback = require('connect-history-api-fallback');
+// var historyApiFallback = require('connect-history-api-fallback');
 
 module.exports = {
     mode: 'development',
@@ -32,7 +32,11 @@ module.exports = {
               attrs: [':data-src']
             }
           }
-        }
+        },
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
       ]
     },
     plugins: [
@@ -47,7 +51,7 @@ module.exports = {
             serveStaticOptions: { 
               extensions: ['html']
             },
-            middleware: [ historyApiFallback()]
+            // middleware: [ historyApiFallback()]
           },
         })
     ],
