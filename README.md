@@ -1,4 +1,4 @@
-# project-template
+# AngularJS Starter
 This repo consists of gulp, webpack, browser-sync.
 features:
 parses es6 modules;
